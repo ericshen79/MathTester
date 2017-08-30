@@ -1,0 +1,12 @@
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\bin\Debug\MathTester.exe.config
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\bin\Debug\MathTester.exe
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\bin\Debug\MathTester.pdb
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\bin\Debug\MathTester.xml
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.vbprojResolveAssemblyReference.cache
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.Resources.resources
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.vbproj.GenerateResource.Cache
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.exe
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.xml
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.pdb
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.FrmMath.resources
+c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.frmWrong.resources
