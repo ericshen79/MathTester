@@ -14,6 +14,15 @@
         txtMinus.Text = MainForm.Min_Minus_Value
         txtSeconds.Text = MainForm.Max_Seconds
 
+        If cmbOpt.Items.Count = 0 Then
+            For i As Integer = 0 To 3
+
+                cmbOpt.Items.Add(CType(i, OperatorSelection).ToString())
+
+            Next
+        End If
+        cmbOpt.SelectedIndex = MainForm.OptSelection
+
     End Sub
 
     Private Sub txtValidate_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMax.KeyPress, txtMin.KeyPress, txtPlus.KeyPress, txtMinus.KeyPress, txtSeconds.KeyPress
@@ -36,8 +45,13 @@
             MainForm.Max_Plus_Value = txtPlus.Text
             MainForm.Min_Minus_Value = txtMinus.Text
             MainForm.Max_Seconds = txtSeconds.Text
+            MainForm.OptSelection = cmbOpt.SelectedIndex
             Me.Close()
 
         End If
+    End Sub
+
+    Private Sub cmbOpt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbOpt.SelectedIndexChanged
+
     End Sub
 End Class

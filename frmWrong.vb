@@ -19,7 +19,7 @@
             Dim dr = dt.NewRow()
             dr(0) = obj.Question
             dr(1) = obj.YourAnswer
-            dr(2) = obj.CorrectAnswer
+            dr(2) = "***" 'obj.CorrectAnswer
             dr(3) = obj.Round
             dt.Rows.Add(dr)
 

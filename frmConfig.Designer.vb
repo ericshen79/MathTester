@@ -33,6 +33,8 @@ Partial Class frmConfig
         Me.btnOK = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSeconds = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmbOpt = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'txtMinus
@@ -110,7 +112,7 @@ Partial Class frmConfig
         'btnOK
         '
         Me.btnOK.Font = New System.Drawing.Font("Candara", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOK.Location = New System.Drawing.Point(382, 423)
+        Me.btnOK.Location = New System.Drawing.Point(33, 485)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(155, 42)
         Me.btnOK.TabIndex = 31
@@ -135,12 +137,34 @@ Partial Class frmConfig
         Me.txtSeconds.Size = New System.Drawing.Size(100, 47)
         Me.txtSeconds.TabIndex = 12
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Candara", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(26, 407)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(269, 39)
+        Me.Label2.TabIndex = 32
+        Me.Label2.Text = "Operator Selection"
+        '
+        'cmbOpt
+        '
+        Me.cmbOpt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbOpt.Font = New System.Drawing.Font("Candara", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbOpt.FormattingEnabled = True
+        Me.cmbOpt.Location = New System.Drawing.Point(316, 407)
+        Me.cmbOpt.Name = "cmbOpt"
+        Me.cmbOpt.Size = New System.Drawing.Size(224, 34)
+        Me.cmbOpt.TabIndex = 33
+        '
         'frmConfig
         '
         Me.AcceptButton = Me.btnOK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(570, 508)
+        Me.ClientSize = New System.Drawing.Size(570, 549)
+        Me.Controls.Add(Me.cmbOpt)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.txtSeconds)
         Me.Controls.Add(Me.Label1)
@@ -172,4 +196,6 @@ Partial Class frmConfig
     Friend WithEvents btnOK As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtSeconds As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents cmbOpt As ComboBox
 End Class

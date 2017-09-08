@@ -10,6 +10,12 @@ Public Structure WrongAnswer
     Public Timestamp As DateTime
 End Structure
 
+Public Enum OperatorSelection
+    Plus_Minus = 0
+    Multiply_Divide = 1
+    Multiply_Only = 2
+    All = 3
+End Enum
 
 Public Class FrmMath
     Private Structure CalculateFormula
@@ -33,7 +39,6 @@ Public Class FrmMath
     Public Min_Minus_Value As Integer = 0
     Public Max_Seconds As Integer = 135
 
-
     Public logfile As String
     Public logfile_correct As String
 
@@ -47,7 +52,7 @@ Public Class FrmMath
     Dim AnswerTestBoxes(MAX_QUESTIONS) As TextBox
     Dim ToTestFormulas(MAX_QUESTIONS) As CalculateFormula
     Dim r As Integer
-    Dim enableTimeDiv As Boolean = False
+    Public OptSelection As OperatorSelection
     Private wrongquestions As List(Of WrongAnswer)
     Private correctquestions As List(Of CorrectAnswer)
 
@@ -59,6 +64,25 @@ Public Class FrmMath
         r = r + 1
         Dim i As Integer
 
+        Dim ix As Integer = 0
+        Dim iy As Integer = 0
+
+        Select Case OptSelection
+            Case OperatorSelection.Plus_Minus
+                ix = 2
+                iy = 0
+            Case OperatorSelection.Multiply_Only
+                ix = 1
+                iy = 2
+            Case OperatorSelection.Multiply_Divide
+                ix = 2
+                iy = 2
+            Case OperatorSelection.All
+                ix = 4
+                iy = 0
+        End Select
+
+
         For i = 1 To MAX_QUESTIONS
             Dim x As Integer
             Dim y As Integer
@@ -69,7 +93,8 @@ Public Class FrmMath
 
             While goloop
 
-                o = Int(Rnd() * IIf(enableTimeDiv, 4, 2))
+                o = Int(Rnd() * ix) + iy
+
                 If o = 0 Or o = 1 Then
                     x = Int(Rnd() * (Max_Number - Min_Number + 1)) + Min_Number
                     y = Int(Rnd() * (Max_Number - Min_Number + 1)) + Min_Number
@@ -141,14 +166,13 @@ Public Class FrmMath
 
                 Dim items() As String = line.Split(",")
 
-
                 Max_Number = Val(items(0))
                 Min_Number = Val(items(1))
                 Max_Plus_Value = Val(items(2))
                 Min_Minus_Value = Val(items(3))
                 Max_Seconds = Val(items(4))
                 chbLimit.Enabled = IIf(items(5) = 1, True, False)
-                enableTimeDiv = IIf(items(6) = 1, True, False)
+                OptSelection = CType(Val(items(6)), OperatorSelection)
 
             End Using
 
