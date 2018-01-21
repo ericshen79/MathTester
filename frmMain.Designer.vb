@@ -71,6 +71,8 @@ Partial Class FrmMath
         Me.btnWrong = New System.Windows.Forms.Button()
         Me.btnConfig = New System.Windows.Forms.Button()
         Me.btnRecheck = New System.Windows.Forms.Button()
+        Me.btnHelp = New System.Windows.Forms.Button()
+        Me.btnDivide = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'chbLimit
@@ -485,11 +487,11 @@ Partial Class FrmMath
         '
         Me.btnWrong.Font = New System.Drawing.Font("Candara", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnWrong.ForeColor = System.Drawing.Color.Red
-        Me.btnWrong.Location = New System.Drawing.Point(125, 465)
+        Me.btnWrong.Location = New System.Drawing.Point(132, 465)
         Me.btnWrong.Name = "btnWrong"
         Me.btnWrong.Size = New System.Drawing.Size(42, 42)
         Me.btnWrong.TabIndex = 31
-        Me.btnWrong.Text = "X"
+        Me.btnWrong.Text = "H"
         Me.btnWrong.UseVisualStyleBackColor = True
         '
         'btnConfig
@@ -514,11 +516,35 @@ Partial Class FrmMath
         Me.btnRecheck.Text = "Recheck"
         Me.btnRecheck.UseVisualStyleBackColor = True
         '
+        'btnHelp
+        '
+        Me.btnHelp.Font = New System.Drawing.Font("Candara", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHelp.ForeColor = System.Drawing.Color.Green
+        Me.btnHelp.Location = New System.Drawing.Point(209, 465)
+        Me.btnHelp.Name = "btnHelp"
+        Me.btnHelp.Size = New System.Drawing.Size(42, 42)
+        Me.btnHelp.TabIndex = 33
+        Me.btnHelp.Text = "X"
+        Me.btnHelp.UseVisualStyleBackColor = True
+        '
+        'btnDivide
+        '
+        Me.btnDivide.Font = New System.Drawing.Font("Candara", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDivide.ForeColor = System.Drawing.Color.Green
+        Me.btnDivide.Location = New System.Drawing.Point(286, 465)
+        Me.btnDivide.Name = "btnDivide"
+        Me.btnDivide.Size = New System.Drawing.Size(42, 42)
+        Me.btnDivide.TabIndex = 34
+        Me.btnDivide.Text = "÷"
+        Me.btnDivide.UseVisualStyleBackColor = True
+        '
         'FrmMath
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1236, 534)
+        Me.Controls.Add(Me.btnDivide)
+        Me.Controls.Add(Me.btnHelp)
         Me.Controls.Add(Me.btnConfig)
         Me.Controls.Add(Me.btnWrong)
         Me.Controls.Add(Me.lblTime)
@@ -624,4 +650,6 @@ Partial Class FrmMath
     Friend WithEvents btnWrong As Button
     Friend WithEvents btnConfig As Button
     Friend WithEvents btnRecheck As Button
+    Friend WithEvents btnHelp As Button
+    Friend WithEvents btnDivide As Button
 End Class

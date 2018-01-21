@@ -10,3 +10,6 @@ c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\D
 c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.pdb
 c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.FrmMath.resources
 c:\users\xiaob\documents\visual studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.frmWrong.resources
+C:\Users\xiaob\Documents\Visual Studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.frmConfig.resources
+C:\Users\xiaob\Documents\Visual Studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.frmHelper.resources
+C:\Users\xiaob\Documents\Visual Studio 2017\Projects\MathTester\MathTester\obj\Debug\MathTester.frmDivide.resources

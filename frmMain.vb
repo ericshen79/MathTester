@@ -14,7 +14,9 @@ Public Enum OperatorSelection
     Plus_Minus = 0
     Multiply_Divide = 1
     Multiply_Only = 2
-    All = 3
+    Plus_Minus_Multiply = 3
+    Divide_Only = 4
+    All = 5
 End Enum
 
 Public Class FrmMath
@@ -35,6 +37,7 @@ Public Class FrmMath
 
     Public Max_Number As Integer = 99
     Public Min_Number As Integer = 10
+    Public Max_Multiply_Number As Integer = 9 '99
     Public Max_Plus_Value As Integer = 100
     Public Min_Minus_Value As Integer = 0
     Public Max_Seconds As Integer = 135
@@ -77,6 +80,12 @@ Public Class FrmMath
             Case OperatorSelection.Multiply_Divide
                 ix = 2
                 iy = 2
+            Case OperatorSelection.Plus_Minus_Multiply
+                ix = 3
+                iy = 0
+            Case OperatorSelection.Divide_Only
+                ix = 1
+                iy = 3
             Case OperatorSelection.All
                 ix = 4
                 iy = 0
@@ -90,18 +99,31 @@ Public Class FrmMath
             Dim z As Integer
             Dim q As String = ""
             Dim goloop As Boolean = True
-
+            Dim m As Integer
             While goloop
 
                 o = Int(Rnd() * ix) + iy
 
+                x = 0
+                y = 0
+                m = 0
+
                 If o = 0 Or o = 1 Then
                     x = Int(Rnd() * (Max_Number - Min_Number + 1)) + Min_Number
                     y = Int(Rnd() * (Max_Number - Min_Number + 1)) + Min_Number
+                ElseIf o = 2 Then
+                    'x = Int(Rnd() * 99) + 1
+                    x = Int(Rnd() * Max_Multiply_Number) + 1
+                    'y = Int(Rnd() * 99) + 1
+                    'y = Int(Rnd() * Max_Multiply_Number) + 1
+                    y = Int(Rnd() * 30) + 1
                 Else
-                    x = Int(Rnd() * 9) + 1
-                    y = Int(Rnd() * 9) + 1
-                    If o = 3 Then x = x * y
+                    Do Until x > 100 And x < 1000
+                        m = Int(Rnd() * (500 - 50)) + 51
+                        y = Int(Rnd() * (9 - 2)) + 3
+                        x = y * m
+                        Debug.Print(CStr(y) + "*" + CStr(m) + "=" + CStr(x))
+                    Loop
                 End If
 
                 Select Case o
@@ -173,6 +195,7 @@ Public Class FrmMath
                 Max_Seconds = Val(items(4))
                 chbLimit.Enabled = IIf(items(5) = 1, True, False)
                 OptSelection = CType(Val(items(6)), OperatorSelection)
+                Max_Multiply_Number = Val(items(7))
 
             End Using
 
@@ -345,5 +368,17 @@ Public Class FrmMath
                 AnswerTestBoxes(i).BackColor = Color.Red
             End If
         Next
+    End Sub
+
+    Private Sub btnHelp_Click(sender As Object, e As EventArgs) Handles btnHelp.Click
+
+        Dim help_form As New frmHelper
+        help_form.Show()
+    End Sub
+
+    Private Sub btnDivide_Click(sender As Object, e As EventArgs) Handles btnDivide.Click
+
+        Dim help_form As New frmDivide
+        help_form.Show()
     End Sub
 End Class

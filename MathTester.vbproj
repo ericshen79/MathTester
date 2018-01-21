@@ -78,6 +78,18 @@
     <Compile Include="frmConfig.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmDivide.Designer.vb">
+      <DependentUpon>frmDivide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDivide.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelper.Designer.vb">
+      <DependentUpon>frmHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmWrong.Designer.vb">
       <DependentUpon>frmWrong.vb</DependentUpon>
     </Compile>
@@ -110,6 +122,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frmConfig.resx">
       <DependentUpon>frmConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDivide.resx">
+      <DependentUpon>frmDivide.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelper.resx">
+      <DependentUpon>frmHelper.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWrong.resx">
       <DependentUpon>frmWrong.vb</DependentUpon>

@@ -13,9 +13,11 @@
         txtPlus.Text = MainForm.Max_Plus_Value
         txtMinus.Text = MainForm.Min_Minus_Value
         txtSeconds.Text = MainForm.Max_Seconds
-
+        Dim item As OperatorSelection
         If cmbOpt.Items.Count = 0 Then
-            For i As Integer = 0 To 3
+            Dim items As Integer = System.Enum.GetNames(item.GetType()).Length
+
+            For i As Integer = 0 To items - 1
 
                 cmbOpt.Items.Add(CType(i, OperatorSelection).ToString())
 
